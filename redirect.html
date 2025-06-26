@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecting...</title>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const target = params.get("target");
+    if (target) {
+      window.location.href = decodeURIComponent(target);
+    } else {
+      document.body.innerText = "Missing target URL.";
+    }
+  </script>
+</head>
+<body>
+  Redirecting...
+</body>
+</html>
